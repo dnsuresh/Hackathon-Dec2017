@@ -9,10 +9,38 @@
         background-color:#404040;
     }
     .columnBorder{
-        border:2px solid #C0C0C0;
+        /*border:2px solid #C0C0C0;*/
+        padding-left:0px;
+        padding-right:0px;
     }
     .modal-header{
         background-color:#337ab7;
+    }
+    .panel-padding{
+        padding-left:10px;
+    }
+    .regularfont
+    {
+        font-weight:normal;
+    }
+    .well
+    {
+        height:960px;
+        overflow:scroll
+    }
+    .well,.list-group-item
+    {
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:2px;
+        padding-bottom:2px;
+    }
+    .list-group{
+        margin-bottom:3px;
+    }
+    .no-padding
+    {
+        padding:0px;
     }
 </style>
 <script  type='text/ng-template' id='modal.html'>
@@ -21,7 +49,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3 class="modal-title">Job details of {{ buttonClicked }}</h3>
+                    <h3 class="modal-title"><strong>Job details of {{ buttonClicked }}</strong></h3>
                 </div>
                 <div class="modal-body" ng-transclude>
                 </div>
@@ -36,7 +64,7 @@
         </div>
         <div class="row">
             <div class="col-md-3  columnBorder" style="height:960px;" id="sidebar">
-                <div ng-repeat="asset in assets">
+                <!--<div ng-repeat="asset in assets">
                     <div class="row">
                         <div class="col-md-8">
                             <div class="checkbox">
@@ -49,6 +77,22 @@
                     </div>
                         
                         
+                </div>-->
+                <div class="well">
+                    <div ng-repeat="asset in assets" class="list-group">
+                        <div class="list-group-item">
+                            <div class="row no-padding">
+                                <div class="col-md-8">
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value=""><strong>{{asset}}</strong></label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button ng-click="toggleModal(asset)" class="btn btn-primary">Report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-9" id="content">
@@ -62,25 +106,27 @@
     </div>
     <modal visible="showModal">
         <div ng-repeat="jobdetails in JobDetails">
-            <div class="row">
+            <div class="panel panel-default panel-padding">
                 <div class="row">
-                    <div class="col-md-6">
-                        <label>Job Description : </label>
-                        <label>{{jobdetails.JobDescrption}}</label>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label>Job Description : </label>
+                            <label class="regularfont">{{jobdetails.JobDescrption}}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>JobID : </label>
+                            <label class="regularfont">{{jobdetails.JobID}}</label>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <label>JobID : </label>
-                        <label>{{jobdetails.JobID}}</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>Distance Travelled : </label>
-                        <label>{{jobdetails.Distancetravelled}}</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label>Duration : </label>
-                        <label>{{jobdetails.Duration}}</label>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label>Distance Travelled : </label>
+                            <label class="regularfont">{{jobdetails.Distancetravelled}}</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>Duration : </label>
+                            <label class="regularfont">{{jobdetails.Duration}}</label>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -31,3 +31,36 @@ C:\MyFolder\Hackathon\Dec 2017\VehicleTracking\VehicleTracking\bin\Microsoft.Cod
 C:\MyFolder\Hackathon\Dec 2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.csprojResolveAssemblyReference.cache
 C:\MyFolder\Hackathon\Dec 2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.dll
 C:\MyFolder\Hackathon\Dec 2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.pdb
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\ApplicationInsights.config
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\csc.exe
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\System.Collections.Immutable.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\System.Reflection.Metadata.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\vbc.exe
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\VBCSCompiler.exe
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\roslyn\VBCSCompiler.exe.config
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\VehicleTracking.dll.config
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\VehicleTracking.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\VehicleTracking.pdb
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.Agent.Intercept.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.DependencyCollector.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.Web.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.WindowsServer.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.ApplicationInsights.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.DependencyCollector.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.Web.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.AI.WindowsServer.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.ApplicationInsights.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.csprojResolveAssemblyReference.cache
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.dll
+C:\d\Github\Hackathon-Dec2017\VehicleTracking\VehicleTracking\obj\Debug\VehicleTracking.pdb
