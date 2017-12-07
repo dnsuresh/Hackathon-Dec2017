@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExportDataMapper" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IExportDataMapper_ExportEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportEvents" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportEvents_MissingCapabilityFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q1:MissingCapabilityFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportEvents_DatabaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q2:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportEvents_UnknownFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q3:UnknownFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportEvents_FaultBaseFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q4:FaultBase" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportPortData" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportPortDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_MissingCapabilityFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q5:MissingCapabilityFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_DatabaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q6:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_UnknownFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q7:UnknownFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPortData_FaultBaseFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q8:FaultBase" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAllData" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_MissingCapabilityFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q9:MissingCapabilityFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_DatabaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q10:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_UnknownFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q11:UnknownFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportAllData_FaultBaseFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q12:FaultBase" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportPositions" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportPositionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_MissingCapabilityFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q13:MissingCapabilityFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_DatabaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q14:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_UnknownFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q15:UnknownFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportPositions_FaultBaseFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q16:FaultBase" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportDriverStatusEvents" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportDriverStatusEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_MissingCapabilityFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q17:MissingCapabilityFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_DatabaseFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q18:DatabaseFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_UnknownFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q19:UnknownFault" />
+  </wsdl:message>
+  <wsdl:message name="IExportDataMapper_ExportDriverStatusEvents_FaultBaseFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Utility.Faults" name="detail" element="q20:FaultBase" />
+  </wsdl:message>
+  <wsdl:portType name="IExportDataMapper">
+    <wsdl:operation name="ExportEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEvents" message="tns:IExportDataMapper_ExportEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEventsResponse" message="tns:IExportDataMapper_ExportEvents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEventsMissingCapabilityFaultFault" name="MissingCapabilityFaultFault" message="tns:IExportDataMapper_ExportEvents_MissingCapabilityFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEventsDatabaseFaultFault" name="DatabaseFaultFault" message="tns:IExportDataMapper_ExportEvents_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEventsUnknownFaultFault" name="UnknownFaultFault" message="tns:IExportDataMapper_ExportEvents_UnknownFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportEventsFaultBaseFault" name="FaultBaseFault" message="tns:IExportDataMapper_ExportEvents_FaultBaseFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportPortData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortData" message="tns:IExportDataMapper_ExportPortData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortDataResponse" message="tns:IExportDataMapper_ExportPortData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortDataMissingCapabilityFaultFault" name="MissingCapabilityFaultFault" message="tns:IExportDataMapper_ExportPortData_MissingCapabilityFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortDataDatabaseFaultFault" name="DatabaseFaultFault" message="tns:IExportDataMapper_ExportPortData_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortDataUnknownFaultFault" name="UnknownFaultFault" message="tns:IExportDataMapper_ExportPortData_UnknownFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPortDataFaultBaseFault" name="FaultBaseFault" message="tns:IExportDataMapper_ExportPortData_FaultBaseFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportAllData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllData" message="tns:IExportDataMapper_ExportAllData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllDataResponse" message="tns:IExportDataMapper_ExportAllData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllDataMissingCapabilityFaultFault" name="MissingCapabilityFaultFault" message="tns:IExportDataMapper_ExportAllData_MissingCapabilityFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllDataDatabaseFaultFault" name="DatabaseFaultFault" message="tns:IExportDataMapper_ExportAllData_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllDataUnknownFaultFault" name="UnknownFaultFault" message="tns:IExportDataMapper_ExportAllData_UnknownFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportAllDataFaultBaseFault" name="FaultBaseFault" message="tns:IExportDataMapper_ExportAllData_FaultBaseFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportPositions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositions" message="tns:IExportDataMapper_ExportPositions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositionsResponse" message="tns:IExportDataMapper_ExportPositions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositionsMissingCapabilityFaultFault" name="MissingCapabilityFaultFault" message="tns:IExportDataMapper_ExportPositions_MissingCapabilityFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositionsDatabaseFaultFault" name="DatabaseFaultFault" message="tns:IExportDataMapper_ExportPositions_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositionsUnknownFaultFault" name="UnknownFaultFault" message="tns:IExportDataMapper_ExportPositions_UnknownFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportPositionsFaultBaseFault" name="FaultBaseFault" message="tns:IExportDataMapper_ExportPositions_FaultBaseFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportDriverStatusEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEvents" message="tns:IExportDataMapper_ExportDriverStatusEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEventsResponse" message="tns:IExportDataMapper_ExportDriverStatusEvents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEventsMissingCapabilityFaultFault" name="MissingCapabilityFaultFault" message="tns:IExportDataMapper_ExportDriverStatusEvents_MissingCapabilityFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEventsDatabaseFaultFault" name="DatabaseFaultFault" message="tns:IExportDataMapper_ExportDriverStatusEvents_DatabaseFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEventsUnknownFaultFault" name="UnknownFaultFault" message="tns:IExportDataMapper_ExportDriverStatusEvents_UnknownFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IExportDataMapper/ExportDriverStatusEventsFaultBaseFault" name="FaultBaseFault" message="tns:IExportDataMapper_ExportDriverStatusEvents_FaultBaseFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IExportDataMapper" type="tns:IExportDataMapper">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExportEvents">
+      <soap:operation soapAction="http://tempuri.org/IExportDataMapper/ExportEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MissingCapabilityFaultFault">
+        <soap:fault use="literal" name="MissingCapabilityFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault use="literal" name="DatabaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnknownFaultFault">
+        <soap:fault use="literal" name="UnknownFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FaultBaseFault">
+        <soap:fault use="literal" name="FaultBaseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportPortData">
+      <soap:operation soapAction="http://tempuri.org/IExportDataMapper/ExportPortData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MissingCapabilityFaultFault">
+        <soap:fault use="literal" name="MissingCapabilityFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault use="literal" name="DatabaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnknownFaultFault">
+        <soap:fault use="literal" name="UnknownFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FaultBaseFault">
+        <soap:fault use="literal" name="FaultBaseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportAllData">
+      <soap:operation soapAction="http://tempuri.org/IExportDataMapper/ExportAllData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MissingCapabilityFaultFault">
+        <soap:fault use="literal" name="MissingCapabilityFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault use="literal" name="DatabaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnknownFaultFault">
+        <soap:fault use="literal" name="UnknownFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FaultBaseFault">
+        <soap:fault use="literal" name="FaultBaseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportPositions">
+      <soap:operation soapAction="http://tempuri.org/IExportDataMapper/ExportPositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MissingCapabilityFaultFault">
+        <soap:fault use="literal" name="MissingCapabilityFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault use="literal" name="DatabaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnknownFaultFault">
+        <soap:fault use="literal" name="UnknownFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FaultBaseFault">
+        <soap:fault use="literal" name="FaultBaseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExportDriverStatusEvents">
+      <soap:operation soapAction="http://tempuri.org/IExportDataMapper/ExportDriverStatusEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MissingCapabilityFaultFault">
+        <soap:fault use="literal" name="MissingCapabilityFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DatabaseFaultFault">
+        <soap:fault use="literal" name="DatabaseFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnknownFaultFault">
+        <soap:fault use="literal" name="UnknownFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="FaultBaseFault">
+        <soap:fault use="literal" name="FaultBaseFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExportDataMapper">
+    <wsdl:port name="BasicHttpBinding_IExportDataMapper" binding="tns:BasicHttpBinding_IExportDataMapper">
+      <soap:address location="http://tcl-ft-web2.tcl.trimblecloud.com/WCFServices/ExportData.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://telvisant.trimble.com/WebServices/Asset/" xmlns:s1="http://telvisant.trimble.com/WebServices/Asset/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://telvisant.trimble.com/WebServices/Asset/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://telvisant.trimble.com/WebServices/Asset/">
+      <s:element name="Modify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExistingAsset" type="tns:Asset" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Asset">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssetTypeID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssetOrganizationID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MapColor" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MapIcon" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisplayTypeID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayTypeDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DIMListID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="VehicleAttributeProfileID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageProtocol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDTVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VIN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LogicTypeID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisplayOSTypeID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayOSTypeDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ModifyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Rename">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewAssetNames" type="tns:ArrayOfIDNamePair" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIDNamePair">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Asset" nillable="true" type="tns:IDNamePair" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IDNamePair">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RenameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RenameResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAssetStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AssetStatus" type="tns:AssetStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AssetStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:AssetStatusCodes" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AssetStatusCodes">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Success" />
+          <s:enumeration value="DbAccessError" />
+          <s:enumeration value="InvalidSiteId" />
+          <s:enumeration value="InvalidAssetId" />
+          <s:enumeration value="UnknownMessage" />
+          <s:enumeration value="MessageTooLong" />
+          <s:enumeration value="TooManyResponses" />
+          <s:enumeration value="ResponseTooLong" />
+          <s:enumeration value="NoDevice" />
+          <s:enumeration value="NoDisplay" />
+          <s:enumeration value="NoSubject" />
+          <s:enumeration value="InvalidLocationID" />
+          <s:enumeration value="AccessDenied" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetAssets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Assets" type="tns:ArrayOfAsset" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAsset">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Asset" nillable="true" type="tns:Asset" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAssetNames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AssetNames" type="tns:ArrayOfIDNamePair" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeneralConfigurationResult" type="tns:ArrayOfGeneralDeviceConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGeneralDeviceConfiguration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GeneralDeviceConfiguration" nillable="true" type="tns:GeneralDeviceConfiguration" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GeneralDeviceConfiguration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeviceLogicType" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSpeedingConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeedingConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSpeedingConfigurationResult" type="tns:ArrayOfSpeedingConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSpeedingConfiguration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SpeedingConfiguration" nillable="true" type="tns:SpeedingConfiguration" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SpeedingConfiguration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Threshold" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetSpeedingConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SpeedingConfigurations" type="tns:ArrayOfSpeedingConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSpeedingConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSpeedingConfigurationResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStoppedConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStoppedConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStoppedConfigurationResult" type="tns:ArrayOfStoppedConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStoppedConfiguration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StoppedConfiguration" nillable="true" type="tns:StoppedConfiguration" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StoppedConfiguration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Threshold" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetStoppedConfiguration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StoppedConfigurations" type="tns:ArrayOfStoppedConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetStoppedConfigurationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetStoppedConfigurationResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMileageAndRuntime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MileageAndRuntimeConfigurations" type="tns:ArrayOfMileageAndRuntimeConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMileageAndRuntimeConfiguration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MileageAndRuntimeConfiguration" nillable="true" type="tns:MileageAndRuntimeConfiguration" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MileageAndRuntimeConfiguration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AssetID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Runtime" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetMileageAndRuntimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMileageAndRuntimeResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTrackerSensoryDiscreteInputs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetID" type="tns:ArrayOfLong1" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceInputs" type="tns:DeviceInputs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DeviceInputs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Input1" type="tns:Input" />
+          <s:element minOccurs="0" maxOccurs="1" name="Input2" type="tns:Input" />
+          <s:element minOccurs="0" maxOccurs="1" name="Input3" type="tns:Input" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Input">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Hysteresis" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PositivePolarity" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IgnitionRequired" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="OnDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OffDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MonitoredItemDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiscreteInput" type="tns:DiscreteInput" />
+          <s:element minOccurs="1" maxOccurs="1" name="AlertState" type="tns:AlertState" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DiscreteInput">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Input1" />
+          <s:enumeration value="Input2" />
+          <s:enumeration value="Input3" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AlertState">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="On" />
+          <s:enumeration value="Off" />
+          <s:enumeration value="Any" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SendTrackerSensoryDiscreteInputsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTrackerSensoryDiscreteInputsResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetOrganizationID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetID" type="tns:ArrayOfLong1" />
+            <s:element minOccurs="1" maxOccurs="1" name="OrganizationID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAssetOrganizationIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAssetOrganizationIDResult" type="tns:ArrayOfAssetStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadUninstalledAssets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadUninstalledAssetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Assets" type="tns:ArrayOfAsset" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDevicesInAssets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AssetID1" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="AssetID2" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SwapDevicesInAssetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SwapDevicesInAssetsResult" type="tns:ArrayOfAsset" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDimListId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sessionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="assetId" type="tns:ArrayOfLong1" />
+            <s:element minOccurs="1" maxOccurs="1" name="dimListId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDimListIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDimListIdResult" type="tns:ArrayOfLong1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfAsset" nillable="true" type="tns:ArrayOfAsset" />
+      <s:element name="ArrayOfIDNamePair1" nillable="true" type="tns:ArrayOfIDNamePair1" />
+      <s:complexType name="ArrayOfIDNamePair1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IDNamePair" nillable="true" type="tns:IDNamePair" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfGeneralDeviceConfiguration" nillable="true" type="tns:ArrayOfGeneralDeviceConfiguration" />
+      <s:element name="ArrayOfSpeedingConfiguration" nillable="true" type="tns:ArrayOfSpeedingConfiguration" />
+      <s:element name="ArrayOfStoppedConfiguration" nillable="true" type="tns:ArrayOfStoppedConfiguration" />
+      <s:element name="ArrayOfAssetStatus" nillable="true" type="tns:ArrayOfAssetStatus" />
+      <s:element name="ArrayOfLong1" nillable="true" type="tns:ArrayOfLong1" />
+    </s:schema>
+    <s:schema targetNamespace="http://telvisant.trimble.com/WebServices/Asset/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ModifySoapIn">
+    <wsdl:part name="parameters" element="tns:Modify" />
+  </wsdl:message>
+  <wsdl:message name="ModifySoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameSoapIn">
+    <wsdl:part name="parameters" element="tns:Rename" />
+  </wsdl:message>
+  <wsdl:message name="RenameSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssets" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssetNames" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeneralConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeneralConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeedingConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeedingConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSpeedingConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSpeedingConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="SetSpeedingConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSpeedingConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStoppedConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStoppedConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetStoppedConfigurationSoapIn">
+    <wsdl:part name="parameters" element="tns:SetStoppedConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="SetStoppedConfigurationSoapOut">
+    <wsdl:part name="parameters" element="tns:SetStoppedConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMileageAndRuntimeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMileageAndRuntime" />
+  </wsdl:message>
+  <wsdl:message name="SetMileageAndRuntimeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMileageAndRuntimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTrackerSensoryDiscreteInputsSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTrackerSensoryDiscreteInputs" />
+  </wsdl:message>
+  <wsdl:message name="SendTrackerSensoryDiscreteInputsSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTrackerSensoryDiscreteInputsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAssetOrganizationID" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAssetOrganizationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadUninstalledAssets" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadUninstalledAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsSoapIn">
+    <wsdl:part name="parameters" element="tns:SwapDevicesInAssets" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsSoapOut">
+    <wsdl:part name="parameters" element="tns:SwapDevicesInAssetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDimListId" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDimListIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIDNamePair1" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGeneralDeviceConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSpeedingConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfStoppedConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetID" type="s1:StringArray" />
+    <wsdl:part name="OrganizationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAssetStatus" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetID1" type="s:string" />
+    <wsdl:part name="AssetID2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdHttpGetIn">
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="assetId" type="s1:StringArray" />
+    <wsdl:part name="dimListId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong1" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetAssetNamesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIDNamePair1" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConfigurationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfGeneralDeviceConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeedingConfigurationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSpeedingConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="GetStoppedConfigurationHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfStoppedConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetID" type="s1:StringArray" />
+    <wsdl:part name="OrganizationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssetOrganizationIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAssetStatus" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadUninstalledAssetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AssetID1" type="s:string" />
+    <wsdl:part name="AssetID2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SwapDevicesInAssetsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAsset" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdHttpPostIn">
+    <wsdl:part name="sessionId" type="s:string" />
+    <wsdl:part name="assetId" type="s1:StringArray" />
+    <wsdl:part name="dimListId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDimListIdHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLong1" />
+  </wsdl:message>
+  <wsdl:portType name="AssetWSSoap">
+    <wsdl:operation name="Modify">
+      <wsdl:input message="tns:ModifySoapIn" />
+      <wsdl:output message="tns:ModifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Rename">
+      <wsdl:input message="tns:RenameSoapIn" />
+      <wsdl:output message="tns:RenameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssets">
+      <wsdl:input message="tns:GetAssetsSoapIn" />
+      <wsdl:output message="tns:GetAssetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <wsdl:input message="tns:GetAssetNamesSoapIn" />
+      <wsdl:output message="tns:GetAssetNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <wsdl:input message="tns:GetGeneralConfigurationSoapIn" />
+      <wsdl:output message="tns:GetGeneralConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <wsdl:input message="tns:GetSpeedingConfigurationSoapIn" />
+      <wsdl:output message="tns:GetSpeedingConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSpeedingConfiguration">
+      <wsdl:input message="tns:SetSpeedingConfigurationSoapIn" />
+      <wsdl:output message="tns:SetSpeedingConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <wsdl:input message="tns:GetStoppedConfigurationSoapIn" />
+      <wsdl:output message="tns:GetStoppedConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStoppedConfiguration">
+      <wsdl:input message="tns:SetStoppedConfigurationSoapIn" />
+      <wsdl:output message="tns:SetStoppedConfigurationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMileageAndRuntime">
+      <wsdl:input message="tns:SetMileageAndRuntimeSoapIn" />
+      <wsdl:output message="tns:SetMileageAndRuntimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackerSensoryDiscreteInputs">
+      <wsdl:input message="tns:SendTrackerSensoryDiscreteInputsSoapIn" />
+      <wsdl:output message="tns:SendTrackerSensoryDiscreteInputsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <wsdl:input message="tns:UpdateAssetOrganizationIDSoapIn" />
+      <wsdl:output message="tns:UpdateAssetOrganizationIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <wsdl:input message="tns:DownloadUninstalledAssetsSoapIn" />
+      <wsdl:output message="tns:DownloadUninstalledAssetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <wsdl:input message="tns:SwapDevicesInAssetsSoapIn" />
+      <wsdl:output message="tns:SwapDevicesInAssetsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <wsdl:input message="tns:UpdateDimListIdSoapIn" />
+      <wsdl:output message="tns:UpdateDimListIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AssetWSHttpGet">
+    <wsdl:operation name="GetAssets">
+      <wsdl:input message="tns:GetAssetsHttpGetIn" />
+      <wsdl:output message="tns:GetAssetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <wsdl:input message="tns:GetAssetNamesHttpGetIn" />
+      <wsdl:output message="tns:GetAssetNamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <wsdl:input message="tns:GetGeneralConfigurationHttpGetIn" />
+      <wsdl:output message="tns:GetGeneralConfigurationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <wsdl:input message="tns:GetSpeedingConfigurationHttpGetIn" />
+      <wsdl:output message="tns:GetSpeedingConfigurationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <wsdl:input message="tns:GetStoppedConfigurationHttpGetIn" />
+      <wsdl:output message="tns:GetStoppedConfigurationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <wsdl:input message="tns:UpdateAssetOrganizationIDHttpGetIn" />
+      <wsdl:output message="tns:UpdateAssetOrganizationIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <wsdl:input message="tns:DownloadUninstalledAssetsHttpGetIn" />
+      <wsdl:output message="tns:DownloadUninstalledAssetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <wsdl:input message="tns:SwapDevicesInAssetsHttpGetIn" />
+      <wsdl:output message="tns:SwapDevicesInAssetsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <wsdl:input message="tns:UpdateDimListIdHttpGetIn" />
+      <wsdl:output message="tns:UpdateDimListIdHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AssetWSHttpPost">
+    <wsdl:operation name="GetAssets">
+      <wsdl:input message="tns:GetAssetsHttpPostIn" />
+      <wsdl:output message="tns:GetAssetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <wsdl:input message="tns:GetAssetNamesHttpPostIn" />
+      <wsdl:output message="tns:GetAssetNamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <wsdl:input message="tns:GetGeneralConfigurationHttpPostIn" />
+      <wsdl:output message="tns:GetGeneralConfigurationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <wsdl:input message="tns:GetSpeedingConfigurationHttpPostIn" />
+      <wsdl:output message="tns:GetSpeedingConfigurationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <wsdl:input message="tns:GetStoppedConfigurationHttpPostIn" />
+      <wsdl:output message="tns:GetStoppedConfigurationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <wsdl:input message="tns:UpdateAssetOrganizationIDHttpPostIn" />
+      <wsdl:output message="tns:UpdateAssetOrganizationIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <wsdl:input message="tns:DownloadUninstalledAssetsHttpPostIn" />
+      <wsdl:output message="tns:DownloadUninstalledAssetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <wsdl:input message="tns:SwapDevicesInAssetsHttpPostIn" />
+      <wsdl:output message="tns:SwapDevicesInAssetsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <wsdl:input message="tns:UpdateDimListIdHttpPostIn" />
+      <wsdl:output message="tns:UpdateDimListIdHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AssetWSSoap" type="tns:AssetWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Modify">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/Modify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rename">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/Rename" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssets">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetAssets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetAssetNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetGeneralConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetSpeedingConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSpeedingConfiguration">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetSpeedingConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetStoppedConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStoppedConfiguration">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetStoppedConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMileageAndRuntime">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetMileageAndRuntime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackerSensoryDiscreteInputs">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SendTrackerSensoryDiscreteInputs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/UpdateAssetOrganizationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/DownloadUninstalledAssets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SwapDevicesInAssets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/UpdateDimListId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AssetWSSoap12" type="tns:AssetWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Modify">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/Modify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Rename">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/Rename" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssets">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetAssets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetAssetNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetGeneralConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetSpeedingConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSpeedingConfiguration">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetSpeedingConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/GetStoppedConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStoppedConfiguration">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetStoppedConfiguration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMileageAndRuntime">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SetMileageAndRuntime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTrackerSensoryDiscreteInputs">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SendTrackerSensoryDiscreteInputs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/UpdateAssetOrganizationID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/DownloadUninstalledAssets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/SwapDevicesInAssets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Asset/UpdateDimListId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AssetWSHttpGet" type="tns:AssetWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAssets">
+      <http:operation location="/GetAssets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <http:operation location="/GetAssetNames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <http:operation location="/GetGeneralConfiguration" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <http:operation location="/GetSpeedingConfiguration" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <http:operation location="/GetStoppedConfiguration" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <http:operation location="/UpdateAssetOrganizationID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <http:operation location="/DownloadUninstalledAssets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <http:operation location="/SwapDevicesInAssets" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <http:operation location="/UpdateDimListId" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AssetWSHttpPost" type="tns:AssetWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAssets">
+      <http:operation location="/GetAssets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetNames">
+      <http:operation location="/GetAssetNames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConfiguration">
+      <http:operation location="/GetGeneralConfiguration" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeedingConfiguration">
+      <http:operation location="/GetSpeedingConfiguration" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoppedConfiguration">
+      <http:operation location="/GetStoppedConfiguration" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetOrganizationID">
+      <http:operation location="/UpdateAssetOrganizationID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadUninstalledAssets">
+      <http:operation location="/DownloadUninstalledAssets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SwapDevicesInAssets">
+      <http:operation location="/SwapDevicesInAssets" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDimListId">
+      <http:operation location="/UpdateDimListId" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AssetWS">
+    <wsdl:port name="AssetWSSoap" binding="tns:AssetWSSoap">
+      <soap:address location="http://loginft.trimblems.com/xmlhttp/messages/asset/asset.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AssetWSSoap12" binding="tns:AssetWSSoap12">
+      <soap12:address location="http://loginft.trimblems.com/xmlhttp/messages/asset/asset.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AssetWSHttpGet" binding="tns:AssetWSHttpGet">
+      <http:address location="http://loginft.trimblems.com/xmlhttp/messages/asset/asset.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AssetWSHttpPost" binding="tns:AssetWSHttpPost">
+      <http:address location="http://loginft.trimblems.com/xmlhttp/messages/asset/asset.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

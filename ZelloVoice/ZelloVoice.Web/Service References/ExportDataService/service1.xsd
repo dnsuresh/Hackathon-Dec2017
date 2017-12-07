@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events.Data" />
+  <xs:element name="ExportEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDateTimeGmt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDateTimeGmt" type="xs:dateTime" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="assetList" nillable="true" type="q1:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" minOccurs="0" name="ExportEventsResult" nillable="true" type="q2:ArrayOfExportEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportPortData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDateTimeGmt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDateTimeGmt" type="xs:dateTime" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="assetList" nillable="true" type="q3:ArrayOflong" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="portList" nillable="true" type="q4:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportPortDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" minOccurs="0" name="ExportPortDataResult" nillable="true" type="q5:ArrayOfExportEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAllData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDateTimeGmt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDateTimeGmt" type="xs:dateTime" />
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="assetList" nillable="true" type="q6:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportAllDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" minOccurs="0" name="ExportAllDataResult" nillable="true" type="q7:ArrayOfExportEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportPositions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startDateTimeGmt" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDateTimeGmt" type="xs:dateTime" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="assetList" nillable="true" type="q8:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportPositionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" minOccurs="0" name="ExportPositionsResult" nillable="true" type="q9:ArrayOfExportPosition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportDriverStatusEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="driverList" nillable="true" type="q10:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportDriverStatusEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events.Data" minOccurs="0" name="ExportDriverStatusEventsResult" nillable="true" type="q11:ArrayOfDriverStatusEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,172 @@
+﻿@using ZelloVoice.Web.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+    Layout = null;
+}
+
+
+
+<style type="text/css">
+    /*body, html {
+        height: 100%;
+    }*/
+
+    .bg {
+        /* The image used */
+        background-image: url("/Images/RedimixTruckOld.jpg");
+        /* Full height */
+        height: 100%;
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .form-signin {
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+        .form-signin .form-signin-heading, .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+
+        .form-signin .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .form-signin .form-control:focus {
+                z-index: 2;
+            }
+
+        .form-signin input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+    .account-wall {
+        margin-top: 20px;
+        padding: 40px 0px 20px 0px;
+        background-color: #f7f7f7;
+        -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+
+    img {
+        border: none;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+
+    #uberuns {
+        height: 60%;
+        width: 100%;
+        background: rgba(255,255,255,.3);
+        position: relative;
+        border: 2px aliceblue solid;
+    }
+
+        #uberuns:after {
+            content: '';
+            height: 90%;
+            width: 100%;
+            position: absolute;
+            background-attachment: fixed;
+            background-size: cover;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+    #rememberMe {
+        font-size: larger;
+        font-weight: bold;
+        color: black;
+        padding-left: 34px;
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg">
+    <center>
+        <section id="loginForm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-md-offset-4">
+                        <div id="uberuns" class="account-wall">
+                            <center>
+                                <img src="@Url.Content(@"~/Images/TrimbleLogo.png")"
+                                     alt="">
+                            </center>
+                            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
+            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                                @Html.TextBoxFor(r => r.Organisation, new { @class = "form-control", placeholder = "Organisation", required = "required", autofocus = "autofocus" })
+                                <br />
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "User name", required = "required" })
+                                <br />
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password", required = "required" })
+                                <button class="btn btn-lg btn-primary btn-block" type="submit" style="width:93%">
+                                    Sign in
+                                </button>
+                                <label id="rememberMe" class="checkbox pull-left">
+                                    @Html.CheckBoxFor(r => r.RememberMe)
+                                    Remember me
+                                </label>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </center>
+</body>
+</html>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")

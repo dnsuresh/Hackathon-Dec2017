@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities" />
+  <xs:complexType name="EventParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities" base="q1:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EventDescriptionParameter" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="MetricValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventParameter" nillable="true" type="tns:EventParameter" />
+  <xs:complexType name="EventParameterCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventParameterCollection" nillable="true" type="tns:EventParameterCollection" />
+  <xs:complexType name="EventDescriptionParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:EventDescriptionParameterBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ParameterEnum" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventDescriptionParameter" nillable="true" type="tns:EventDescriptionParameter" />
+  <xs:complexType name="EventDescriptionParameterBase">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities" base="q2:EntityBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EventId" type="xs:int" />
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="ParameterType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EventDescriptionParameterBase" nillable="true" type="tns:EventDescriptionParameterBase" />
+</xs:schema>
