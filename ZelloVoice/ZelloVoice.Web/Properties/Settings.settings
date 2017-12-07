@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ZelloVoice.Web.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ZelloVoice_Web_SessionService_SessionWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://loginft.trimblems.com/xmlhttp/messages/session/session.asmx</Value>
+    </Setting>
+    <Setting Name="ZelloVoice_Web_AssetService_AssetWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://loginft.trimblems.com/xmlhttp/messages/asset/asset.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

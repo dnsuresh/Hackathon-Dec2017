@@ -1,0 +1,390 @@
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\csc.exe
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\vbc.exe
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll.config
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.pdb
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Owin.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\WebGrease.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.pdb
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.xml
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.csprojResolveAssemblyReference.cache
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.dll
+D:\Samples\Office\Hackthon\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\csc.exe
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\vbc.exe
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll.config
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\AxInterop.PttLib.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Infrastructure.Interface.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Owin.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.Interface.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Services.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Data.Mappers.Interface.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Infrastructure.Library.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Controls.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Zello.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\WebGrease.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessDigitalTicketing.Common.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessConfigurations.Common.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.ObjectBuilder.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.WebAPIInterface.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Map.Interface.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.1.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.2.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.1.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.2.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.2.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.Database.Entity.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Web.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.1.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.2.0.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Infrastructure.Interface.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.Interface.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Services.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Data.Mappers.Interface.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Infrastructure.Library.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Controls.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Zello.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.xml
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessDigitalTicketing.Common.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessConfigurations.Common.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.WebAPIInterface.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Map.Interface.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.1.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.2.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.1.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.2.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.2.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.Database.Entity.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Web.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.1.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.2.0.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-CO\Infrastructure.Interface.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Infrastructure.Interface.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\de-DE\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-CO\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-ES\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-FR\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\it-IT\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\nl-BE\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\zh-CHS\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\de-DE\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-ES\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-FR\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\it-IT\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\nl-BE\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\zh-CHS\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Microsoft.Practices.CompositeUI.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\de-DE\Microsoft.Practices.CompositeUI.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-CO\Microsoft.Practices.CompositeUI.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Microsoft.Practices.CompositeUI.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\de-DE\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\es-CO\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.pdb
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\obj\Debug\Interop.PttLib.dll
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.csproj.ResolveComReference.cache
+C:\Users\smuthuk\Documents\Visual Studio 2015\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.csprojResolveAssemblyReference.cache
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.csprojResolveAssemblyReference.cache
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\obj\Debug\Interop.PttLib.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.csproj.ResolveComReference.cache
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\obj\Debug\ZelloVoice.Web.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\csc.exe
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\vbc.exe
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll.config
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\ZelloVoice.Web.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Owin.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\WebGrease.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessDigitalTicketing.Common.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessConfigurations.Common.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.ObjectBuilder.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.WebAPIInterface.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Map.Interface.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.1.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.2.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.1.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.2.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.2.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.Database.Entity.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Web.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.1.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.2.0.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Antlr3.Runtime.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\EntityFramework.SqlServer.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Infrastructure.Interface.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Google.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Newtonsoft.Json.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Net.Http.Formatting.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Helpers.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.Owin.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Http.WebHost.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Mvc.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Optimization.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.Razor.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\System.Web.WebPages.Razor.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Entities.Interface.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Business.Services.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Data.Mappers.Interface.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Infrastructure.Library.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Controls.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Zello.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Microsoft.Practices.CompositeUI.WinForms.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\CommonLibrary.xml
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessDigitalTicketing.Common.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.BusinessConfigurations.Common.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.WebAPIInterface.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Map.Interface.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.1.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.2.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.1.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.Common.2.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.Configuration.2.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.TFCS.Database.Entity.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.MobileSolutions.Utility.Web.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.1.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\Trimble.Protocols.PortData.DigitalTicketing.Common.2.0.pdb
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-CO\Infrastructure.Interface.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Infrastructure.Interface.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\de-DE\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-CO\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-ES\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-FR\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\it-IT\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\nl-BE\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\zh-CHS\Trimble.MobileSolutions.Infrastructure.Library.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\de-DE\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-ES\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-FR\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\it-IT\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\nl-BE\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\zh-CHS\Trimble.MobileSolutions.Utility.Controls.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Microsoft.Practices.CompositeUI.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\de-DE\Microsoft.Practices.CompositeUI.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-CO\Microsoft.Practices.CompositeUI.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Microsoft.Practices.CompositeUI.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\bg-BG\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\de-DE\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\es-CO\Microsoft.Practices.CompositeUI.WinForms.resources.dll
+C:\Sri\Hackathon\Hack-2\ZelloVoice\ZelloVoice.Web\bin\fr-CA\Microsoft.Practices.CompositeUI.WinForms.resources.dll

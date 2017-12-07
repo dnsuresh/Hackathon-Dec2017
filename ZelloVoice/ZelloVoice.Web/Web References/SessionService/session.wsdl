@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://telvisant.trimble.com/WebServices/" xmlns:s1="http://telvisant.trimble.com/WebServices/AbstractTypes" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://telvisant.trimble.com/WebServices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://telvisant.trimble.com/WebServices/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SdkOrganization" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SdkDeveloperID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SdkPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="tns:LoginResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="LoginResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="Failure" />
+          <s:enumeration value="FailureInvalidCustomer" />
+          <s:enumeration value="FailureInvalidUserName" />
+          <s:enumeration value="FailureInvalidPassword" />
+          <s:enumeration value="FailureIneffectiveCustomer" />
+          <s:enumeration value="FailureIneffectiveUser" />
+          <s:enumeration value="FailureUserLockout" />
+          <s:enumeration value="Success" />
+          <s:enumeration value="SuccessPasswordExpired" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Login2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserCulture" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="tns:LoginResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCapabilities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapabilitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Capabilities" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Capability" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCapabilityCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapabilityCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCapabilityCategoriesResult" type="tns:ArrayOfCapabilityCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCapabilityCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CapabilityCategory" nillable="true" type="tns:CapabilityCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CapabilityCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryToken" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCapabilitiesOfCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapabilitiesOfCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Capabilities" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapabilityGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCapabilityGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CapabilityGroups" type="tns:ArrayOfIDNamePair" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIDNamePair">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="tns:IDNamePair" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IDNamePair">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerUserDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerUserDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerUserDetailsResult" type="tns:CustomerUserDetails" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerUserDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCustomerUserDetails2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerUserDetails2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerUserDetails2Result" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Password" nillable="true" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardTimeZoneName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Locked" type="s:boolean" />
+        </s:sequence>
+        <s:attribute name="AliasName" type="s:string" />
+        <s:attribute name="ShowChannelCallsInVoiceActivityLog" type="s:boolean" use="required" />
+      </s:complexType>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditTraceStart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuditName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdditionalInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuditTraceStartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditTraceStop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequestID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditTraceStopResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditTraceLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AuditName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExecutionStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ExecutionEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="AssetIDs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="AdditionalInformation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditTraceLogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ArrayOfString1" nillable="true" type="tns:ArrayOfString1" />
+      <s:complexType name="ArrayOfString1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfCapabilityCategory" nillable="true" type="tns:ArrayOfCapabilityCategory" />
+      <s:element name="ArrayOfIDNamePair1" nillable="true" type="tns:ArrayOfIDNamePair1" />
+      <s:complexType name="ArrayOfIDNamePair1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IDNamePair" nillable="true" type="tns:IDNamePair" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CustomerUserDetails" nillable="true" type="tns:CustomerUserDetails" />
+      <s:element name="User" nillable="true" type="tns:User" />
+      <s:element name="long" type="s:long" />
+    </s:schema>
+    <s:schema targetNamespace="http://telvisant.trimble.com/WebServices/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="Login2SoapIn">
+    <wsdl:part name="parameters" element="tns:Login2" />
+  </wsdl:message>
+  <wsdl:message name="Login2SoapOut">
+    <wsdl:part name="parameters" element="tns:Login2Response" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCapabilities" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCapabilitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCapabilityCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCapabilityCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCapabilitiesOfCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCapabilitiesOfCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCapabilityGroups" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCapabilityGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserDetails2" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerUserDetails2Response" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStartSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditTraceStart" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStartSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditTraceStartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditTraceStop" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditTraceStopResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceLogSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditTraceLog" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceLogSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditTraceLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpGetOut" />
+  <wsdl:message name="GetCapabilitiesHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString1" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCapabilityCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategoryHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="CategoryToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString1" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIDNamePair1" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:CustomerUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2HttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2HttpGetOut">
+    <wsdl:part name="Body" element="tns:User" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="OldPassword" type="s:string" />
+    <wsdl:part name="NewPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut" />
+  <wsdl:message name="PingHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PingHttpGetOut" />
+  <wsdl:message name="AuditTraceStartHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AuditName" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="AdditionalInformation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStartHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="RequestID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopHttpGetOut" />
+  <wsdl:message name="AuditTraceLogHttpGetIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AuditName" type="s:string" />
+    <wsdl:part name="ExecutionStart" type="s:string" />
+    <wsdl:part name="ExecutionEnd" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="AdditionalInformation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceLogHttpGetOut" />
+  <wsdl:message name="LogoutHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpPostOut" />
+  <wsdl:message name="GetCapabilitiesHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString1" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityCategoriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCapabilityCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategoryHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="CategoryToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilitiesOfCategoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString1" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCapabilityGroupsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfIDNamePair1" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:CustomerUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2HttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerUserDetails2HttpPostOut">
+    <wsdl:part name="Body" element="tns:User" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="OldPassword" type="s:string" />
+    <wsdl:part name="NewPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut" />
+  <wsdl:message name="PingHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PingHttpPostOut" />
+  <wsdl:message name="AuditTraceStartHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AuditName" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="AdditionalInformation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStartHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="RequestID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceStopHttpPostOut" />
+  <wsdl:message name="AuditTraceLogHttpPostIn">
+    <wsdl:part name="SessionID" type="s:string" />
+    <wsdl:part name="AuditName" type="s:string" />
+    <wsdl:part name="ExecutionStart" type="s:string" />
+    <wsdl:part name="ExecutionEnd" type="s:string" />
+    <wsdl:part name="AssetIDs" type="s1:StringArray" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="EndDate" type="s:string" />
+    <wsdl:part name="AdditionalInformation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuditTraceLogHttpPostOut" />
+  <wsdl:portType name="SessionWSSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input name="Login2" message="tns:Login2SoapIn" />
+      <wsdl:output name="Login2" message="tns:Login2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <wsdl:input message="tns:GetCapabilitiesSoapIn" />
+      <wsdl:output message="tns:GetCapabilitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <wsdl:input message="tns:GetCapabilityCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCapabilityCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <wsdl:input message="tns:GetCapabilitiesOfCategorySoapIn" />
+      <wsdl:output message="tns:GetCapabilitiesOfCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <wsdl:input message="tns:GetCapabilityGroupsSoapIn" />
+      <wsdl:output message="tns:GetCapabilityGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <wsdl:input message="tns:GetCustomerUserDetailsSoapIn" />
+      <wsdl:output message="tns:GetCustomerUserDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <wsdl:input message="tns:GetCustomerUserDetails2SoapIn" />
+      <wsdl:output message="tns:GetCustomerUserDetails2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <wsdl:input message="tns:AuditTraceStartSoapIn" />
+      <wsdl:output message="tns:AuditTraceStartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <wsdl:input message="tns:AuditTraceStopSoapIn" />
+      <wsdl:output message="tns:AuditTraceStopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <wsdl:input message="tns:AuditTraceLogSoapIn" />
+      <wsdl:output message="tns:AuditTraceLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SessionWSHttpGet">
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutHttpGetIn" />
+      <wsdl:output message="tns:LogoutHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <wsdl:input message="tns:GetCapabilitiesHttpGetIn" />
+      <wsdl:output message="tns:GetCapabilitiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <wsdl:input message="tns:GetCapabilityCategoriesHttpGetIn" />
+      <wsdl:output message="tns:GetCapabilityCategoriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <wsdl:input message="tns:GetCapabilitiesOfCategoryHttpGetIn" />
+      <wsdl:output message="tns:GetCapabilitiesOfCategoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <wsdl:input message="tns:GetCapabilityGroupsHttpGetIn" />
+      <wsdl:output message="tns:GetCapabilityGroupsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <wsdl:input message="tns:GetCustomerUserDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetCustomerUserDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <wsdl:input message="tns:GetCustomerUserDetails2HttpGetIn" />
+      <wsdl:output message="tns:GetCustomerUserDetails2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingHttpGetIn" />
+      <wsdl:output message="tns:PingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <wsdl:input message="tns:AuditTraceStartHttpGetIn" />
+      <wsdl:output message="tns:AuditTraceStartHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <wsdl:input message="tns:AuditTraceStopHttpGetIn" />
+      <wsdl:output message="tns:AuditTraceStopHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <wsdl:input message="tns:AuditTraceLogHttpGetIn" />
+      <wsdl:output message="tns:AuditTraceLogHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SessionWSHttpPost">
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutHttpPostIn" />
+      <wsdl:output message="tns:LogoutHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <wsdl:input message="tns:GetCapabilitiesHttpPostIn" />
+      <wsdl:output message="tns:GetCapabilitiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <wsdl:input message="tns:GetCapabilityCategoriesHttpPostIn" />
+      <wsdl:output message="tns:GetCapabilityCategoriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <wsdl:input message="tns:GetCapabilitiesOfCategoryHttpPostIn" />
+      <wsdl:output message="tns:GetCapabilitiesOfCategoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <wsdl:input message="tns:GetCapabilityGroupsHttpPostIn" />
+      <wsdl:output message="tns:GetCapabilityGroupsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <wsdl:input message="tns:GetCustomerUserDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetCustomerUserDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <wsdl:input message="tns:GetCustomerUserDetails2HttpPostIn" />
+      <wsdl:output message="tns:GetCustomerUserDetails2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingHttpPostIn" />
+      <wsdl:output message="tns:PingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <wsdl:input message="tns:AuditTraceStartHttpPostIn" />
+      <wsdl:output message="tns:AuditTraceStartHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <wsdl:input message="tns:AuditTraceStopHttpPostIn" />
+      <wsdl:output message="tns:AuditTraceStopHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <wsdl:input message="tns:AuditTraceLogHttpPostIn" />
+      <wsdl:output message="tns:AuditTraceLogHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SessionWSSoap" type="tns:SessionWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Login2" style="document" />
+      <wsdl:input name="Login2">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Login2">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilityCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilitiesOfCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilityGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCustomerUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/GetCustomerUserDetails2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceStart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceStop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <soap:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionWSSoap12" type="tns:SessionWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Login2" style="document" />
+      <wsdl:input name="Login2">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="Login2">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilityCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilitiesOfCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCapabilityGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCustomerUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/GetCustomerUserDetails2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceStart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceStop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <soap12:operation soapAction="http://telvisant.trimble.com/WebServices/AuditTraceLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionWSHttpGet" type="tns:SessionWSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <http:operation location="/GetCapabilities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <http:operation location="/GetCapabilityCategories" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <http:operation location="/GetCapabilitiesOfCategory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <http:operation location="/GetCapabilityGroups" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <http:operation location="/GetCustomerUserDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <http:operation location="/GetCustomerUserDetails2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <http:operation location="/Ping" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <http:operation location="/AuditTraceStart" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <http:operation location="/AuditTraceStop" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <http:operation location="/AuditTraceLog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SessionWSHttpPost" type="tns:SessionWSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilities">
+      <http:operation location="/GetCapabilities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityCategories">
+      <http:operation location="/GetCapabilityCategories" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilitiesOfCategory">
+      <http:operation location="/GetCapabilitiesOfCategory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCapabilityGroups">
+      <http:operation location="/GetCapabilityGroups" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails">
+      <http:operation location="/GetCustomerUserDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerUserDetails2">
+      <http:operation location="/GetCustomerUserDetails2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <http:operation location="/Ping" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStart">
+      <http:operation location="/AuditTraceStart" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceStop">
+      <http:operation location="/AuditTraceStop" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTraceLog">
+      <http:operation location="/AuditTraceLog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SessionWS">
+    <wsdl:port name="SessionWSSoap" binding="tns:SessionWSSoap">
+      <soap:address location="http://loginft.trimblems.com/xmlhttp/messages/session/session.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionWSSoap12" binding="tns:SessionWSSoap12">
+      <soap12:address location="http://loginft.trimblems.com/xmlhttp/messages/session/session.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionWSHttpGet" binding="tns:SessionWSHttpGet">
+      <http:address location="http://loginft.trimblems.com/xmlhttp/messages/session/session.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SessionWSHttpPost" binding="tns:SessionWSHttpPost">
+      <http:address location="http://loginft.trimblems.com/xmlhttp/messages/session/session.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

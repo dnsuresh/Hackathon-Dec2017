@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events.Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Trimble.MobileSolutions.Business.Entities.Events.Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" />
+  <xs:complexType name="ArrayOfDriverStatusEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DriverStatusEvent" nillable="true" type="tns:DriverStatusEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDriverStatusEvent" nillable="true" type="tns:ArrayOfDriverStatusEvent" />
+  <xs:complexType name="DriverStatusEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DriverId" type="xs:long" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Trimble.Platform.CommonLibrary.Objects" minOccurs="0" name="LastStatusEvent" nillable="true" type="q1:ExportEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DriverStatusEvent" nillable="true" type="tns:DriverStatusEvent" />
+</xs:schema>
