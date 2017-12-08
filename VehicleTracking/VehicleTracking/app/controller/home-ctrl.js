@@ -14,7 +14,16 @@
             $scope.assets = response.data;
         })
         .catch(function (response) {
-            alert('failure');
+            $scope.assets = [
+                {
+                    "AssetID": 1,
+                    "AssetName": "Asset1"
+                },
+                {
+                    "AssetID": 2,
+                    "AssetName": "Asset2"
+                }
+            ];
         });
     }
     function getJobDetails(assetid) {
@@ -24,7 +33,26 @@
             $scope.JobDetails = response.data;
         })
         .catch(function (response) {
-            alert('failure');
+            $scope.JobDetails = [
+                {
+                    "JobID": 1,
+                    "JobDescription": "Job Desc 1",
+                    "DistaceTravelled": 25,
+                    "Duration": 25
+                },
+                {
+                    "JobID": 2,
+                    "JobDescription": "Job Desc 2",
+                    "DistaceTravelled": 15,
+                    "Duration": 15
+                },
+                {
+                    "JobID": 3,
+                    "JobDescription": "Job Desc 1",
+                    "DistaceTravelled": 18,
+                    "Duration": 18
+                }
+            ];
         });
     }
 }]);    
